@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "マドタブ",
+  "description": "ウィンドウ単位のシンプルなタブマネージャー",
+  "version": "1.0",
+  "icons": {
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png",
+    "32": "images/icon_32.png"
+  },
+  "action": {
+    "default_icon": {
+      "19": "images/icon_19.png",
+      "38": "images/icon_38.png"
+    },
+    "default_title": "マドタブ",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

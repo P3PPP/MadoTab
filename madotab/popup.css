@@ -1,0 +1,147 @@
+:root {
+  --color-highlight: rgb(7, 156, 255);
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    width: 360px;
+    min-height: 600px;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* .tabs_header {
+} */
+
+.list_container {
+    display: list-item;
+    list-style-type: none;
+    padding-left: 0px;
+    height: 100%;
+}
+
+.list_container ::-webkit-scrollbar {
+    width: 10px
+}
+
+.list_container > div:first-child {
+    border-top:1px solid #DDD;
+    border-bottom:1px solid #DDD;
+}
+ 
+.list_container > div + div {
+    border-bottom:1px solid #DDD;
+}
+
+
+.tab_list_item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: white;
+    padding-left: 6px;
+    padding-right: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.tab_list_item:hover {
+    background-color: #F8F8F8;
+}
+
+.tab_list_item {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.tab_list_item * {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.tab_list_item[isActive="true"] .tab_highlight {
+    align-self: stretch;
+    width: 6px;
+    margin-left: -6px;
+    background-color: var(--color-highlight);
+}
+
+.tab_list_item[isActive="false"] .tab_highlight {
+    display: none;
+}
+
+.tab_list_item .tab_favicon {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.tab_list_item[isPinned="true"] .pin_icon {
+    width: 12px;
+    height: 12px;
+}
+
+.tab_list_item[isPinned="false"] .pin_icon {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+.tab_list_item .tab_title {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.tab_list_item[isActive="true"] .tab_title {
+    font-weight: bold;
+    color: var(--color-highlight);
+}
+
+.tab_list_item .close_button {
+    width: 20px;
+    height: 20px;
+    clip-path: circle(10px at 50% 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tab_list_item .close_icon {
+    width: 16px;
+    height: 16px;
+}
+
+.tab_list_item:not(:hover) .close_icon {
+    display: none;
+}
+
+.tab_list_item .close_button:hover {
+    background-color:rgba(250, 40, 40, 0.726);
+}
+
+
+.grabbing {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .15);
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
+
+
+.grabbing:hover .close_icon {
+    display: none;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
